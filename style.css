@@ -1,0 +1,12 @@
+html,body {
+    margin : 0px;
+}
+
+#playGround {
+    border : 2px solid black;
+}
+
+#bird {
+    position: absolute;
+    display: none;
+}
