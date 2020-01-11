@@ -1,4 +1,6 @@
-function Bird() {
+export default function Bird(canvas, ctx) {
+    this.canvas = canvas;
+    this.ctx = ctx;
     this.x = 70;
     this.y = 40;
     this.radius = 15;
@@ -10,20 +12,20 @@ function Bird() {
 
 Bird.prototype.draw = function() {
 
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-    //ctx.rect(this.x, this.y, 35, 35);
-    ctx.fillStyle = "red";
-    ctx.fill();
-    ctx.strokeStyle = "black";
-    ctx.stroke();
+    this.ctx.beginPath();
+    this.ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+    //this.ctx.rect(this.x, this.y, 35, 35);
+    this.ctx.fillStyle = "red";
+    this.ctx.fill();
+    this.ctx.strokeStyle = "black";
+    this.ctx.stroke();
 
 }
 
 Bird.prototype.update = function() {
     this.y += this.dy;
-    if(this.y + this.radius >= canvas.height ) {
-        this.y = canvas.height - this.radius;
+    if(this.y + this.radius >= this.canvas.height ) {
+        this.y = this.canvas.height - this.radius;
         this.dy = 0;
     }
     else {
@@ -34,6 +36,6 @@ Bird.prototype.update = function() {
 }
 
 Bird.prototype.uplift = function() {    
-        bird.y -= 50;
-        bird.dy = 3;
+        this.y -= 50;
+        this.dy = 3;
 }

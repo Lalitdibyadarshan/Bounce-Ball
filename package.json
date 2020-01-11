@@ -1,0 +1,25 @@
+{
+  "name": "bounce_ball",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lalitdibyadarshan/Bounce-Ball.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lalitdibyadarshan/Bounce-Ball/issues"
+  },
+  "homepage": "https://github.com/Lalitdibyadarshan/Bounce-Ball#readme",
+  "devDependencies": {
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}
